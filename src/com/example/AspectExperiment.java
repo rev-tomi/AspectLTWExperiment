@@ -7,11 +7,18 @@ import java.util.List;
 public class AspectExperiment extends AbstractAspectExperiment {
 
 	public static void main(String[] args) {
-		AspectExperiment main = new AspectExperiment();
-		List<Integer> nums = main.foo(new StringHolder("12"));
-		System.out.println(Arrays.toString(nums.toArray()));
+//		AspectExperiment main = new AspectExperiment();
+//		List<Integer> nums = main.foo(new StringHolder("12"));
+//		System.out.println(Arrays.toString(nums.toArray()));
+//		
+//		List<Object> l = null;
 		
-		List<Object> l = null;
+		ConstructorAspectTest cat = new ConstructorAspectTest("asdf");
+		System.out.println("--> cat: " + cat);
+		System.out.println(Arrays.toString(cat.getDataCopy().toArray()));
+		
+		StringHolder sh = new StringHolder("qqriq");
+		System.out.println(sh);
 	}
 	
 	public List<Integer> foo(StringHolder num) {
